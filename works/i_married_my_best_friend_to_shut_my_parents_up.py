@@ -23,7 +23,9 @@ toc = {
     "2": "marriage",
     "3": "marriage",
     "3.1": "Anaerobic Love",
-    "3.2": "-Fake- Married Life",
+    "3.2": "F̶a̶k̶e̶ Married Life",
+    # FIXME: this is part of 3.2 in the original release
+    "3.3": "Afterword",
 }
 
 page_regex = r"^I Married My Best Friend to Shut My Parents Up - c(?P<chapter>[\d#]+) \(v\d\d\) - p[\dp-]+ \[Seven Seas Entertainment] \[Digital] \[1r0n]\.jpg$"
