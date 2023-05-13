@@ -14,7 +14,7 @@ metadata = importlib.import_module(f"works.{meta_module}")
 page_regex = re.compile(metadata.page_regex)
 
 repack_dir = meta_module
-os.mkdirs(repack_dir, exist_ok=True)
+os.makedirs(repack_dir, exist_ok=True)
 with open(os.path.join(repack_dir, "details.json"), "w") as f:
     json.dump(metadata.details, f)
 
