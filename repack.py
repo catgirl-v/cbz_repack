@@ -13,6 +13,7 @@ meta_module = sys.argv[1]
 metadata = importlib.import_module(f"works.{meta_module}")
 
 page_regex = re.compile(metadata.page_regex)
+chapter_overrides = getattr(metadata, "chapter_overrides", {})
 
 repack_dir = meta_module
 os.makedirs(repack_dir, exist_ok=True)
@@ -37,7 +38,11 @@ for vol_num, vol_fn in enumerate(metadata.volumes, 1):
             if not (matches := page_regex.match(page)):
                 raise Exception(page)
             matches = matches.groupdict()
-            chapter = chapters[matches["chapter"]]
+            chap_num = chapter_overrides.get(
+                (vol_num, matches["page"]),
+                matches["chapter"],
+            )
+            chapter = chapters[chap_num]
             chapter.pages.append(page)
             if not chapter.title:
                 if title := matches.get("chap_title"):
