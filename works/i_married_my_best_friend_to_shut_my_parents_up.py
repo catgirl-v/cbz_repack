@@ -28,7 +28,7 @@ toc = {
     "3.3": "Afterword",
 }
 
-page_regex = r"^I Married My Best Friend to Shut My Parents Up - c(?P<chapter>[\d#]+) \(v\d\d\) - p[\dp-]+ \[Seven Seas Entertainment] \[Digital] \[1r0n]\.jpg$"
+page_regex = r"^I Married My Best Friend to Shut My Parents Up - c(?P<chapter>[\d#]+) \(v\d\d\) - p(?P<page>[\dp-]+) \[Seven Seas Entertainment] \[Digital] \[1r0n]\.jpg$"
 
 cover_volume = 1
 cover_file = "I Married My Best Friend to Shut My Parents Up - c001 (v01) - p000 [Seven Seas Entertainment] [Digital] [1r0n].jpg"

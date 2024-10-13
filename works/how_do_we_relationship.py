@@ -28,7 +28,7 @@ details = {
 toc = {
 }
 
-page_regex = r"^How Do We Relationship - c(?P<chapter>[\d#]+) \(v\d\d\) - p[\dp-]+ \[VIZ Media] \[Digital] \[1r0n]\.(?:jpg|png)$"
+page_regex = r"^How Do We Relationship - c(?P<chapter>[\d#]+) \(v\d\d\) - p(?P<page>[\dp-]+) \[VIZ Media] \[Digital] \[1r0n]\.(?:jpg|png)$"
 
 cover_volume = 1
 cover_file = "How Do We Relationship - c001 (v01) - p000 [VIZ Media] [Digital] [1r0n].jpg"
